@@ -65,7 +65,7 @@
     "lint": "prettier --check \"{src,test}/**/*.{js,json,ts}\" \"docs/*.js\" docs/package.json \"docs/src/**/*\" *.md package.json",
     "lint:fix": "prettier --write \"{src,test}/**/*.{js,json,ts}\" \"docs/*.js\" docs/package.json \"docs/src/**/*\" *.md package.json",
     "start-fixtures-server": "octokit-fixtures-server",
-    "pretest": "npm run -s lint",
+    "pretest": "npm run -s lint && npm run build",
     "test": "NODE_OPTIONS=\"$NODE_OPTIONS --experimental-vm-modules\" npx jest --coverage",
     "test:typescript": "npx tsc --noEmit --declaration --allowImportingTsExtensions --moduleResolution node16 --module node16 --noUnusedLocals test/typescript-validate.ts"
   },
